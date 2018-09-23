@@ -14,7 +14,9 @@
       return (
         <div>
           { this.state.counters.map(counter => 
-          <Counter key={ counter.id } value={counter.value} selected={true} />) }
+          <Counter key={counter.id} value={counter.value} id={counter.is}>
+          </Counter>
+          ) }
         </div>
       );
    }
