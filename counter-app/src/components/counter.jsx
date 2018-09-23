@@ -5,19 +5,15 @@ class Counter extends Component {
     count: 0
   };
   
-  // constructor () {
-  //   super();
-  //   this.handleIncrement = this.handleIncrement.bind(this); 
-  // }
-  
   handleIncrement = () => {
-    console.log("Increment clicked", this);
+    this.setState({ count: this.state.count + 1 });
   }
   
   formatCount () {
     if (this.state.count === 0) {
       return "Zero";
     }
+    return this.state.count;
   }
   
   render () {
